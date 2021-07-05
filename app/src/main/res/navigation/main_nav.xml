@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/courseListFragment">
+
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.geofferyj.jquiz.ui.fragments.courses.CourseListFragment"
+        android:label="CourseListFragment" >
+        <action
+            android:id="@+id/action_courseListFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="com.geofferyj.jquiz.ui.fragments.questions.QuestionListFragment"
+        android:label="QuestionListFragment" >
+        <argument
+            android:name="course"
+            app:argType="com.geofferyj.jquiz.models.Course" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.geofferyj.jquiz.ui.fragments.instruction.InstructionsFragment"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" >
+        <argument
+            android:name="course"
+            app:argType="com.geofferyj.jquiz.models.Course" />
+
+        <action
+            android:id="@+id/action_instructionsFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+    </fragment>
+</navigation>

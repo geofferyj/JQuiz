@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432506630645",
+    "project_id": "jquiz-70d20",
+    "storage_bucket": "jquiz-70d20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432506630645:android:36ff6aca65307d96ef30bc",
+        "android_client_info": {
+          "package_name": "com.geofferyj.jquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432506630645-q8vqthn3h9fb44dsh19c7fuqvm2748d4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh66_V83ngeSM9ikJXGIAB9uVAZ_tyCKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432506630645-q8vqthn3h9fb44dsh19c7fuqvm2748d4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
