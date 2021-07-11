@@ -16,7 +16,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 class QuestionListFragment : Fragment() {
 
     private lateinit var binding: FragmentQuestionListBinding
-    private val args: QuestionListFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +29,7 @@ class QuestionListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.text = args.course.name
+//        binding.textView.text = args.course.name
         val questionRVAdapter = QuestionRVAdapter()
         questionRVAdapter.setOnItemClickListener { position, item ->
 
@@ -39,7 +38,7 @@ class QuestionListFragment : Fragment() {
         binding.questionRv.adapter = questionRVAdapter
 
         FirebaseFirestore.getInstance().collection("questions")
-            .whereEqualTo("courseId", args.course.id)
+//            .whereEqualTo("courseId", args.course.id)
             .addSnapshotListener { value, error ->
                 val currentList = mutableListOf<Question>()
                 if (error != null) {

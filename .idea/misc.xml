@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/fragment_instructions.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/fragment_question_details.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/fragment_question_list.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/fragment_results.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/question_item.xml" value="0.24427083333333333" />
       </map>
     </option>

@@ -14,14 +14,6 @@
             app:destination="@id/instructionsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/questionListFragment"
-        android:name="com.geofferyj.jquiz.ui.fragments.questions.QuestionListFragment"
-        android:label="QuestionListFragment" >
-        <argument
-            android:name="course"
-            app:argType="com.geofferyj.jquiz.models.Course" />
-    </fragment>
-    <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.geofferyj.jquiz.ui.fragments.instruction.InstructionsFragment"
         android:label="fragment_instructions"
@@ -29,9 +21,40 @@
         <argument
             android:name="course"
             app:argType="com.geofferyj.jquiz.models.Course" />
-
         <action
-            android:id="@+id/action_instructionsFragment_to_questionListFragment"
-            app:destination="@id/questionListFragment" />
+            android:id="@+id/action_instructionsFragment_to_questionDetailsFragment"
+            app:destination="@id/questionDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/questionDetailsFragment"
+        android:name="com.geofferyj.jquiz.ui.fragments.questions.QuestionDetailsFragment"
+        android:label="QuestionDetailsFragment" >
+        <argument
+            android:name="quizTime"
+            app:argType="string" />
+        <argument
+            android:name="questionsCount"
+            app:argType="integer" />
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_questionDetailsFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:popUpTo="@id/instructionsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.geofferyj.jquiz.ui.fragments.results.ResultsFragment"
+        android:label="ResultsFragment">
+
+        <argument
+            android:name="totalQustions"
+            app:argType="integer" />
+        <argument
+            android:name="correctQuestions"
+            app:argType="integer" />
     </fragment>
 </navigation>
